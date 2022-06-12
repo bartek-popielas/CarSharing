@@ -42,23 +42,6 @@ button {
     z-index: 1;
 }
 
-.layer {
-    background-color: rgba(0, 0, 0, 0.3);
-    width: 1366px;
-    height: 800px;
-    position: absolute;
-    left: 182px;
-    z-index: 0;
-}
-
-.layer-2 {
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 1366px;
-    height: 90px;
-    position: absolute;
-    z-index: 0;
-}
-
 /* LOGO */
 
 .page-logo {
@@ -110,6 +93,16 @@ p.logo-fw {
     text-decoration: none;
     color: white;
     font-weight: 600;
+    height: 100%;
+    padding: 33px 40px;
+}
+
+.page-nav-list a:hover {
+    background-color: #FFFFFF33;
+    color: red;
+    outline: none;
+    transition: .3s;
+    border: none;
 }
 
 /* BANNER */
@@ -177,8 +170,25 @@ p.logo-fw {
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: 850px;    /* 656px */
+    left: 48.5%;
     bottom: -30px;
+}
+
+.layer {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 1366px;
+    height: 800px;
+    position: absolute;
+    z-index: 0;
+}
+
+.layer-2 {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 1366px;
+    height: 90px;
+    position: absolute;
+    z-index: 0;
+    border: 2px solid #FFFFFF33;
 }
 
 
@@ -194,7 +204,6 @@ p.logo-fw {
     line-height: 47px;
     margin: 20px 0;
     position: relative;
-
 }
 
 .subtitle::before, .subtitle::after {
@@ -208,8 +217,6 @@ p.logo-fw {
     margin: 20px;
     justify-self: center;
 }
-
-
 
 .article {
     max-width: 352px;
@@ -355,12 +362,6 @@ textarea:focus {
     border: 1px solid #FF0000;
 }
 
-form p {
-    font-size: 10px;
-    color: #B2B2B2;
-    line-height: 15px;
-}
-
 textarea::placeholder {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 16px;
@@ -380,6 +381,18 @@ textarea::placeholder {
     display: flex;
 }
 
+label.checkbox {
+    font-size: 10px;
+    color: #B2B2B2;
+    line-height: 15px;
+    tab-index: 1;
+}
+
+label.checkbox:focus-within {
+    box-shadow: 0 1px 6px #FF00004D;
+    border: 1px solid #FF0000;
+}
+
 .checkbox span {    /* display: inline-block;*/
     flex-shrink: 0;
     flex-basis: 22px;
@@ -390,7 +403,6 @@ textarea::placeholder {
     align-self: flex-start;
     width: 22px;
     height: 22px;
-    tab-index: 1;
 }
 
 .checkbox span:focus {
@@ -449,6 +461,7 @@ label.checkbox{
 .footer-box a {
     display: flex;
     flex-direction: column;
+    font-weight: 700;
 }
 
 .footer-menu1 a, .footer-menu2 a {
@@ -459,6 +472,12 @@ label.checkbox{
     text-transform: uppercase;
     width: 250px;
     padding: 3px 0;
+}
+
+.footer-menu1 a:focus, .footer-menu1 a:hover,
+.footer-menu2 a:focus, .footer-menu2 a:hover {
+    color: #FF0000;
+    transition: .3s;
 }
 
 .footer-copy {

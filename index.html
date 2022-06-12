@@ -6,7 +6,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&family=
+    Open+Sans:wght@300;400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -14,9 +15,9 @@
 </head>
 <body>
 
-<header class="hero">
-    <div class="layer"></div>
+<header class="hero" id="home">
     <div class="page-header">
+        <div class="layer"></div>
         <div class="layer-2"></div>
         <div class="container">
             <a href="#" class="page-logo">
@@ -27,10 +28,10 @@
 
             <nav class="page-nav">
                 <ul class="page-nav-list">
-                    <li><a href="#banner">Home</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
 
@@ -49,22 +50,22 @@
 
             <div class="btn-row">
                 <button class="btn">
-                    <a href="#">Share a car</a>
+                    <a href="#blog">Share a car</a>
                 </button>
                 <button class="btn btn--white">
-                    <a href="#">Key features</a>
+                    <a href="#service">Key features</a>
                 </button>
             </div>
     </section>
 
     <div class="arrow-down">
-        <img src="images/Icon%20Arrow%20Down.svg" alt="arrow">
+        <a href="#footer"><img src="images/Icon%20Arrow%20Down.svg" alt="arrow"></a>
     </div>
 
 </header>
 
 <main class="blog-content">
-    <h2 class="subtitle blog-title">BLOG</h2>
+    <h2 class="subtitle" id="blog">BLOG</h2>
 
     <div class="container">
         <article class="article">
@@ -103,7 +104,7 @@
     </div>
 
 
-    <div class="service container">
+    <div class="service container" id="service">
         <h2 class="subtitle service-title">Service</h2>
         <div class="four_columns">
             <article class="service_column">
@@ -153,7 +154,7 @@
         </div>
     </div>
 
-    <div class="contact container">
+    <div class="contact container" id="contact">
         <h2 class="subtitle">Contact</h2>
         <div class="contact_container">
             <img src="images/Form%20Photo.png" alt="cars">
@@ -162,16 +163,15 @@
                 <input type="text" placeholder="Type your e-mail">
                 <textarea placeholder="Type Your message"></textarea>
 
-                <label class="checkbox">
-                    <input type="checkbox">
+                <label for="checkbox" class="checkbox">
+                    <input type="checkbox" name="checkbox" id="checkbox">
                     <span></span>
-                    <p>I hereby give consent for my personal data included in my application to
-                        be processed for the purposes of the recruitment process under the European
-                        Parliament’s and Council of the European Union Regulation on the Protection
-                        of Natural Persons as of 27 April 2016, with regard to the processing of
-                        personal data and on the free movement of such data, and repealing Directive
-                        95/46/EC (Data Protection Directive)
-                    </p>
+                    I hereby give consent for my personal data included in my application to
+                    be processed for the purposes of the recruitment process under the European
+                    Parliament’s and Council of the European Union Regulation on the Protection
+                    of Natural Persons as of 27 April 2016, with regard to the processing of
+                    personal data and on the free movement of such data, and repealing Directive
+                    95/46/EC (Data Protection Directive)
                 </label>
 
                 <button class="article-btn form-btn">Send</button>
@@ -182,7 +182,7 @@
 
 </main>
 
-<footer class="footer-container service container">
+<footer class="footer-container service container" id="footer">
 
     <a href="#" class="page-logo footer-logo">
         <img src="./images/Logo%20Footer.svg" alt="Logo">
@@ -208,13 +208,6 @@
     </div>
 
 </footer>
-
-
-
-
-
-
-
 
 </body>
 </html>
